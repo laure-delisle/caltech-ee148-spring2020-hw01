@@ -142,7 +142,7 @@ file_names = [f for f in file_names if '.jpg' in f]
 #   Prediction for various techniques
 #
 #############################################
-techniques = {'match_filtering_red': 'reds',
+techniques = {#'match_filtering_red': 'reds',
               'match_filtering_lights': 'lights',
               #'match_filtering_lights_noise': 'lights'
               }
@@ -162,7 +162,7 @@ for technique, filter_folder in techniques.items():
 
     print("iterate over images...")
 
-    for i in range(10):
+    for i in range(len(file_names)):
         if i % 10 == 0: print(i)
         
         # read image using PIL:
@@ -174,5 +174,5 @@ for technique, filter_folder in techniques.items():
         preds[file_names[i]] = detect_red_light(I, filters, threshold, noise)
 
     # save preds (overwrites any previous predictions!)
-    with open(os.path.join(preds_path,'new_preds_{}.json'.format(technique)),'w') as f:
+    with open(os.path.join(preds_path,'final_preds_{}.json'.format(technique)),'w') as f:
         json.dump(preds,f)

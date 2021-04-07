@@ -7,6 +7,12 @@ There are 334 images, each of them is of dimensions 480x640 with 3 channels (RGB
 
 Red light detection is performed by match filtering. Manually created square filters with a red dot on a black background generate many False Positives and several False Negatives. Real life rectangular patches from daylight and night used as filters perform better but are very sensitive to threshold tuning.
 
+**Deliverables**
+
+- algorithm code: https://github.com/laure-delisle/cs148-hw1/blob/master/run_predictions.py
+- example plotting code: https://github.com/laure-delisle/cs148-hw1/blob/master/plot_predictions.ipynb
+- predictions: https://github.com/laure-delisle/cs148-hw1/blob/master/predictions.json
+
 ## Used techniques
 **Algorithms**
 
